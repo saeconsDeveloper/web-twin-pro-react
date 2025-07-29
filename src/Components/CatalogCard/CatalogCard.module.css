@@ -1,0 +1,131 @@
+/* class to position the arrow button container that toggel sidebar and the image of the card*/
+.img-arrow-icon-wrapper {
+  position: relative;
+  height: 14rem;
+}
+
+/* hover over the arrow button */
+.arrow-icon-wrapper:hover {
+  box-shadow: 0px 0px 15px 5px rgba(111 198 224 / 45%);
+}
+
+.arrow-icon {
+  color: var(--gallary-btn-text-border-color);
+  position: absolute;
+  top: 0.4rem;
+  left: 0.5rem;
+}
+
+/* image of the card */
+.img-arrow-icon-wrapper > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* class to position the arrow icon and colors */
+.arrow-icon-wrapper {
+  position: absolute;
+  top: 92%;
+  right: 1rem;
+  background-color: #172a4f;
+  border: 1px solid #6fc6e0;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.card-explore-btn:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.responsive-card-explore-btn {
+  padding: 8.71px 15px;
+  border-radius: 25px;
+  font-size: 13.8px;
+  background-color: #9c359d;
+  border: 1px solid #1fd85b;
+  color: #1fd85b;
+  margin-bottom: 0.5rem;
+  margin-left: 12rem;
+  width: max-content;
+}
+
+.card-scene-group {
+  position: absolute;
+  min-width: fit-content;
+  width: 5rem;
+  text-align: center;
+  padding: 0.2rem;
+  right: 1rem;
+  top: -0.6rem;
+  z-index: 2;
+}
+
+/* style the title container of card outside sidepanel */
+.card-catalog-title-container {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: max-content;
+  height: 10rem;
+  word-break: break-all;
+}
+
+/* default class of card title and description container */
+.card-catalog-title-container {
+  min-height: 10rem;
+  height: max-content;
+  background-color: rgb(68, 68, 103);
+}
+
+/* style the title container of card inside sidepanel */
+.sidepanel-card-title-container {
+  min-height: max-content;
+  height: 15rem;
+  background-color: rgb(68, 68, 103);
+}
+
+/* trim the number of word in card outside sidepanel */
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .mobile-view-card-dropdown {
+  border: 1px solid green;
+} */
+
+.card-catalog-title-container > * {
+  color: white;
+}
+
+@media (max-width: 428px) {
+  .catalog-card-main-container {
+    width: 100%;
+  }
+
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+
+  .side-panel-card-description {
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+}
+
+/* @media (max-width: 811px) {
+  .catalog-car-main-container {
+    width: 45%;
+  }
+} */

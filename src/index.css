@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* $primary-button-color: var(--primaryButtonTextColour); */
+
+/* Custome variables for colors */
+:root {
+  --sidebar-bg-color: #123088;
+  --button-border-color: rgb(41, 154, 255);
+  --button-color: rgb(41, 154, 255);
+  --button-hover-bg: #299aff;
+  --button-border-hover-color: #299aff;
+
+  /* default login page colors */
+  --login-bg-color-primary: #172a4f;
+  --login-bg-color-secondary: #121212;
+  --login-text-icon-input-bg-color: #ffffff;
+  --login-input-text-color: #000000;
+  --login-button-color: #172a4f;
+  --login-button-text-border-color: rgb(111, 198, 224);
+
+  /* default header page colors */
+  --header-color-primary: #172a4f;
+  --header-color-secondary: #121212;
+  --header-input-bg-color: transparent;
+  --header-input-text-color: #000000;
+
+  /* Dropdowns (Sectors, Search, Filter, etc) default color */
+  --dropdown-bg-color-primary: #172a4f;
+  --dropdown-bg-color-secondary: #121212;
+  --dropdown-text-color: #000000;
+
+  /* Sector layout Side panel default colors */
+  --sidepanel-bg-color-primary: #172a4f;
+  --sidepanel-bg-color-secondary: #121212;
+  --sidepanel-card-bg-color-primary: #172a4f;
+  --sidepanel-card-bg-color-secondary: #15223d;
+  --sidepanel-text-color: #fff;
+  --sidepanel-close-icon-color: #6fc6e0;
+  --sidepanel-button-color: transparent;
+  --sidepanel-btn-text-border-color: #6fc6e0;
+  /* --sidepanel-grid-bg-color:  */
+
+  /* Sector layout gallary page default colors */
+  --gallary-main-background: #121212;
+  --gallary-button-color: #172a4f;
+  --gallary-btn-text-border-color: #6fc6e0;
+  --gallary-card-background: #121212;
+  --gallary-text-color: #fff;
+
+  /* Floating Menu default colors */
+  --fixed-Social-bar-bg-primary: #172a4f;
+  --fixed-Social-bar-bg-secondary: #121212;
+  /* svg bg color */
+  --fixed-social-bar-icon-bg: #121212;
+  /* SVG border and icon color */
+  --fixed-social-bar-icon-color: #6fc6e0;
+  --floating-social-popover-bg-priamry: #172a4f;
+  --floating-social-popover-bg-secondary: #121212;
+  /* text/input/icon */
+  --floating-social-popover-color: #fff;
+  /* contact us form border/input text/submit button color and border */
+  --floating-social-popover-form-input-color: #fff;
+  --fonts-options: "Poppins";
+}
+
+html {
+  margin: 0;
+  font-family: var(--fonts-options), sans-serif;
+  line-height: 1rem;
+  font-size: 0.9375rem;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.ant-switch-inner {
+  box-shadow: 0px 0px 1px 1px #000;
+}
+
+.ant-select .ant-select-selector {
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+}
+
+.ant-select .ant-select-clear {
+  color: #000 !important;
+}
+
+.ant-dropdown {
+  min-width: auto !important;
+}
+
+.ant-table-row-expand-icon-cell {
+  display: none;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  color: rgba(156, 167, 180, 1);
+}
+
+/* class to style the tables */
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* class to move the dots inside the carousel up */
+.ant-carousel .slick-dots-bottom {
+  bottom: 16rem;
+}
+
+/* Ant design carousel class for the dots inside the carousel */
+/* .ant-carousel .slick-dots li.slick-active button {
+  background: white;
+  opacity: 2;
+  border: 1px solid white;
+  border-radius: 90%;
+  width: 1rem;
+  height: auto;
+} */
+
+/* .ant-carousel .slick-dots li button {
+  border: 1px solid white;
+  border-radius: 90%;
+  width: 2rem;
+  height: auto;
+} */
+
+/* html,
+body {
+  overflow: auto;
+} */
+
+@media all and (max-width: 362px) {
+  .ant-carousel .slick-dots-bottom {
+    bottom: 12rem;
+  }
+}
+@media all and (max-width: 430px) {
+  .ant-carousel .slick-dots-bottom {
+    bottom: 12rem;
+  }
+}

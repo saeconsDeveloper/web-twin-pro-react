@@ -1,0 +1,210 @@
+.unity-renderer-main-container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.unity-container {
+  height: 100%;
+}
+
+.loading-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(51, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* image and progress bar inside loading wrapper */
+.loading-image-wrapper {
+  min-width: max-content;
+  width: 30rem;
+  min-height: max-content;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 6.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.loading-image-text-container {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 4rem;
+  gap: .5rem;
+}
+
+/* loading text */
+.loading-image-text-container > span {
+  font-weight: 700;
+  height: max-content;
+  color: white;
+  margin: 0.6rem 0.3rem;
+  width: 20rem;
+  /* word-break: break-all; */
+}
+
+/* loading image inside loading bar */
+.loading-image {
+  width: 4.5rem;
+  height: 4rem;
+  margin-left: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* bg whole loading image */
+.loading-overlay > img {
+  width: 100%;
+  z-index: 2;
+}
+
+/* loading indicator progress bar */
+.progress-bar {
+  position: absolute;
+  width: 65%;
+  height: 10px;
+  background-color: rgb(99, 99, 99);
+  overflow: hidden;
+  left: 7rem;
+  z-index: 3;
+  margin-left: 1.5rem;
+}
+
+.progress-bar-fill {
+  height: 10px;
+  background-color: rgb(190, 190, 190);
+  transition: width 0.5s ease;
+}
+
+.unity-canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* product side panel */
+.product-sidepanel-container {
+  position: fixed;
+  top: 6rem;
+  width: 35rem;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background: linear-gradient(
+    to right,
+    var(--sidepanel-bg-color-primary),
+    var(--sidepanel-bg-color-secondary)
+  );
+  overflow: auto;
+}
+
+/* video player wrapper */
+.wrapper {
+  position: relative;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  /* width: 100%; */
+  overflow: hidden;
+}
+
+/* inside wrapper child element */
+.video-player-wrapper {
+  padding-top: 56.25%;
+}
+
+/* inside video-player-wrapper child element */
+.video-player {
+  position: fixed;
+  z-index: 13;
+  top: 15rem;
+  left: 25rem;
+
+  opacity: 2;
+  /* border: 1.5px solid white; */
+}
+
+.video-close-btn {
+  position: absolute;
+  right: 10rem;
+  top: 4rem;
+  color: white;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/* side panel close icon */
+.product-side-panel-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  color: white;
+  font-weight: bolder;
+}
+
+/* .product-sidepanel-container aside {
+  border: 1px solid green;
+  margin: 0 auto;
+} */
+
+.product-sidepanel-container.hide-sidepanel {
+  left: -200%;
+  transition: all ease 0.9s;
+  -webkit-animation: slide-right 0.5s ease-in both;
+  animation: slide-right 0.5s ease-in both;
+}
+
+.product-sidepanel-container.show-sidepanel {
+  display: block;
+  transition: all ease 0.7s;
+  -webkit-animation: slide-right 0.9s ease-in both;
+  animation: slide-right 0.5s ease-in both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@media all and (max-width: 430px) {
+  .product-sidepanel-container.show-sidepanel {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .loading-image-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .loading-image-text-container > span {
+    margin-left: 2rem;
+  }
+}

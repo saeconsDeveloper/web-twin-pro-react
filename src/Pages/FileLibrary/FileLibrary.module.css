@@ -1,0 +1,111 @@
+.file-library-main-container {
+  /* display: flex; */
+  margin: 0 auto;
+}
+
+.trash {
+  color: #fff;
+  background-color: #ff3b3b;
+  border-color: #ff3b3b;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.goto {
+  background-color: #3d4e65;
+  border-color: #3d4e65;
+}
+
+.download {
+  color: #fff;
+  background-color: #4bd966;
+  border-color: #4bd966;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.file-library-main-container > .file-library-title-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+}
+
+.file-library-title-btn-container > h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+  padding: 20px;
+}
+
+.file-library-main-container
+  > .file-library-title-btn-container
+  > .file-library-btn-container
+  > button {
+  margin: 0.25rem;
+  margin: 0.5rem 0.25rem;
+  color: var(--button-color);
+  background: none;
+  border: 1px solid var(--button-border-color);
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  height: fit-content;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  width: max-content;
+}
+
+.file-library-main-container
+  > .file-library-title-btn-container
+  > .file-library-btn-container
+  > button:hover {
+  color: #fff;
+  background-color: var(--button-hover-bg);
+  border-color: var(--button-border-hover-color);
+}
+
+@media (max-width: 602px) {
+  .file-library-main-container
+    > .file-library-title-btn-container
+    > .file-library-btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .file-library-main-container
+    > .file-library-title-btn-container
+    > .file-library-btn-container
+    > .add-file {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .responsive-cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .responsive-cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

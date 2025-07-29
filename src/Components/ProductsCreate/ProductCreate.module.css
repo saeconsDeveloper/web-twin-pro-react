@@ -1,0 +1,82 @@
+.products-create-main-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+}
+
+.products-create-main-container > .products-create-title-container > h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+  padding: 20px;
+  border-bottom: 0.5px solid rgb(219, 219, 219);
+  /* font-family: Roboto, sans-serif; */
+}
+
+.products-create-form-container {
+  padding: 1rem;
+}
+
+.products-create-form-container > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.products-create-form-container > form > input {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #efefef;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.products-create-form-container > form > p {
+  font-style: italic;
+  font-size: 85%;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.products-create-form-container > form > label {
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(147, 159, 173, 0.84);
+  line-height: 0.9375rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.product-create-btn-container > button {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #299aff;
+  border: 1px solid transparent;
+  border-color: #299aff;
+  box-shadow: none;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.product-create-btn-container > button:hover {
+  color: #fff;
+  background-color: #0388ff;
+  border-color: #0081f5;
+}

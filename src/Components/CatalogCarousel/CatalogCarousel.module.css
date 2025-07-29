@@ -1,0 +1,59 @@
+.catalog-carousal-container {
+  position: relative;
+  /* min-width: fit-content; */
+  width: 25rem;
+  margin: 0 auto;
+}
+
+.catalog-carousal-btn-container {
+  display: flex;
+  padding: 2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0;
+}
+
+.arrow-icon {
+  color: #6fc6e0;
+}
+
+.catalog-carousal-btn-container > button {
+  border: 1px solid #6fc6e0;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-image: radial-gradient(#172a4f, #121212);
+}
+
+.catalog-carousal-btn-container > button:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.catalog-carousal-btn-container > button:hover .arrow-icon {
+  color: #a7deef;
+}
+
+.catalog-carousal-btn-container > button:hover {
+  border: 1px solid #a7deef;
+}
+
+.catalog-carousel {
+  /* border: 1px solid red; */
+  /* padding: 0.5rem; */
+  position: relative;
+}
+
+/*class to style explore button inside the sidepanel card */
+.card-explore-btn {
+  position: absolute;
+  padding: 8.71px 15px;
+  border-radius: 25px;
+  font-size: 13.8px;
+  bottom: 2rem;
+  right: 4rem;
+  background-color: #9c359d;
+  border: 1px solid #1fd85b;
+  color: #1fd85b;
+  margin-bottom: 0.5rem;
+  z-index: 100;
+}

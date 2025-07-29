@@ -1,0 +1,30 @@
+.heading {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+  padding: 20px;
+  /* border-bottom: 0.5px solid rgb(219, 219, 219); */
+}
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.editable-cell {
+  display: flex;
+  gap: 8px;
+  width: 539px;
+  align-items: center;
+}
+
+.editable-cell .btn {
+  display: none;
+}
+
+.editable-cell:hover .btn {
+  display: block;
+}

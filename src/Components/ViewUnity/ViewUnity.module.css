@@ -1,0 +1,96 @@
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.unity-container {
+  background-color: rgb(145, 145, 145);
+}
+
+/* whole page behind the loading bar */
+.loading-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(51, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* wrapper for entire loading image text progress bars */
+.loading-image-wrapper {
+  min-width: max-content;
+  width: 30rem;
+  min-height: max-content;
+  height: 6.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* wrapper div only for loading text and loading image */
+.loading-image-text-container {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 5rem;
+  gap: 1rem;
+  margin: 0.25rem;
+}
+
+/* loading text span */
+.loading-image-text-container > span {
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* loading image inside loading bar */
+.loading-image {
+  width: 4.5rem;
+  height: auto;
+  margin-left: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading-overlay > img {
+  width: 100%;
+  z-index: 2;
+}
+
+/* loading indicator progress bar */
+.progress-bar {
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  background-color: rgb(99, 99, 99);
+  overflow: hidden;
+  left: 7rem;
+  z-index: 1;
+  margin-left: 1rem;
+}
+
+.progress-bar-fill {
+  height: 10px;
+  background-color: rgb(190, 190, 190);
+  transition: width 0.5s ease;
+}
+
+.unity-canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}

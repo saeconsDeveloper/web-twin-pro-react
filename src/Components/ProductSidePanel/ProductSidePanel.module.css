@@ -1,0 +1,12 @@
+.product-sidepanel-content-wrapper {
+  margin: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+/* @media all and (max-width: 413px) {
+  .product-sidepanel-content-wrapper {
+    border: 1px solid hotpink;
+  }
+} */

@@ -1,0 +1,131 @@
+aside {
+  overflow: auto;
+  /* position: fixed; */
+}
+
+.sidebar-icon-wrapper {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-icon-wrapper figure img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon {
+  color: white;
+}
+
+.wrapper {
+  width: 90%;
+  margin-bottom: 2px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar-image-title-wrapper a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-item-container {
+  margin-top: 0.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 0.25rem;
+  font-weight: 600;
+  line-height: 42px;
+  font-size: 0.875rem;
+  color: white;
+  cursor: pointer;
+  /* font-family: Roboto, sans-serif; */
+  padding: 0;
+}
+
+.sidebar-image-title-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  place-items: center;
+}
+
+.sidebar-image-title-wrapper svg {
+  min-width: 28px;
+}
+
+/* .settings-categories-icon-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+} */
+
+.sidebar-sub-item-container > ul {
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.bg {
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.sidebar-sub-item-container > ul > li {
+  padding: 0 4rem;
+  list-style: none;
+  border-left: 0.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-sub-item-container > ul > li:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+footer {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 0 0 1rem;
+  font-weight: 600;
+  line-height: 42px;
+  font-size: 14px;
+  color: white;
+  /* font-family: Roboto, sans-serif; */
+  cursor: pointer;
+}
+
+.sidebar-dropdown {
+  background-color: white;
+  /* border: 1px solid hotpink; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 2.5rem;
+  right: -1;
+  height: 8vw;
+  width: max-content;
+  border-radius: 5px;
+}
+
+.sidebar-dropdown > span {
+  border-bottom: 0.1px solid grey;
+  width: 100%;
+  text-align: center;
+}
+
+footer:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.24);
+}

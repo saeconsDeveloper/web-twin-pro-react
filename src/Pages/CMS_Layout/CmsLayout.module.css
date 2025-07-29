@@ -1,0 +1,110 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  background-color: #f7f8f9;
+  min-height: 100vh;
+  /* height: 100vh; */
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-wrapper {
+  margin: 5rem 1rem;
+  width: calc(100% - 230px);
+  margin-left: 230px;
+}
+.nav-container {
+  height: 75px;
+  width: calc(100% - 258px);
+  margin-left: 230px;
+  border: 1px solid rgb(236, 235, 235);
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 1px 8px 16px -5px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  z-index: 100;
+  right: 0;
+}
+
+/* .nav-container:first-child{
+  position: fixed;
+} */
+
+.sidebar-wrapper > * {
+  width: 258px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+  background-color: var(--sidebar-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: hidden; */
+  position: fixed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+  opacity: 1;
+  width: calc(100vw - 258px);
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebar-wrapper {
+    left: -258px;
+    transition: 0.45s;
+    position: fixed;
+    height: 100vh;
+    z-index: 5;
+  }
+
+  .show-sidebar {
+    left: 0;
+    transition: 0.45s;
+    position: fixed;
+    height: 100vh;
+    z-index: 8;
+    -webkit-animation: slide-right 1s ease-in both;
+    animation: slide-right 1s ease-in both;
+  }
+
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  .nav-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .card-content-wrapper {
+    margin: 5rem 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.heading {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+}
+
+.delete {
+  border: 1px solid red;
+}
+
+.save-btn {
+  width: 95px;
+  height: 44px;
+  background: #299aff;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+td > button:nth-child(1) {
+  color: #fff;
+  background-color: #51a7c5;
+  border-color: #51a7c5;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+td > button:nth-child(2) {
+  color: #fff;
+  background-color: #ff3b3b;
+  border-color: #ff3b3b;
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}

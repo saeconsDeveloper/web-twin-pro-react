@@ -1,0 +1,145 @@
+.product-categories-main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.product-categories-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+
+.product-categories-input-go-btn-container {
+  gap: 1rem;
+  width: auto;
+}
+
+.product-categories-input-go-btn-container input {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #efefef;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /* font-family: Roboto, sans-serif; */
+  margin: 0.5rem 0.25rem;
+}
+
+.product-categories-input-go-btn-container button {
+  background-color: #4bb543;
+  color: white;
+  border-color: #4bb543;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+}
+
+.add-product-categories button {
+  margin: 0.5rem 0.25rem;
+  color: rgb(41, 154, 255);
+  background: none;
+  border: 1px solid rgb(41, 154, 255);
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  height: fit-content;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  width: auto;
+}
+
+.add-product-categories button:hover {
+  color: #fff;
+  background-color: #299aff;
+  border-color: #299aff;
+}
+
+.product-categories-table-container {
+  overflow: auto;
+}
+
+.product-categories-table-container table {
+  width: 100%;
+  border-top: 1px solid #efefef;
+  border-bottom: 2px solid #efefef;
+  color: #4a4a4a;
+  border-collapse: collapse;
+}
+
+.product-categories-table-container > table > thead,
+.product-categories-table-container > table > tbody {
+  white-space: nowrap;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.product-categories-table-container > table > thead > tr > th {
+  font-size: 1rem;
+  color: rgba(55, 77, 103, 0.54);
+  padding: 0.35rem 1rem;
+}
+
+.product-category-delete-btn {
+  color: #fff;
+  background-color: #ff3b3b;
+  border-color: #ff3b3b;
+  box-shadow: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.product-category-edit-btn {
+  color: #fff;
+  background-color: #51a7c5;
+  border-color: #51a7c5;
+  box-shadow: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+@media (max-width: 413px) {
+  .product-categories-input-go-btn-container input {
+    width: min-content;
+  }
+
+  .add-product-categories {
+    width: auto;
+    margin-left: 0;
+    height: fit-content;
+  }
+
+  .product-categories-table-container {
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .product-categories-form {
+    position: relative;
+    height: 50vw;
+  }
+
+  .add-product-categories button {
+    position: absolute;
+    top: 60%;
+    left: 1rem;
+  }
+}

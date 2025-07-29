@@ -1,0 +1,52 @@
+.audit-main-container {
+  margin: 0 auto;
+}
+
+.autdit-tabel-container {
+  overflow: auto;
+}
+
+.audit-title-container > h3 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+  padding: 20px;
+  border-bottom: 0.5px solid rgb(219, 219, 219);
+  text-align: center;
+}
+
+.audit-main-container > .autdit-tabel-container > table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.audit-main-container > .autdit-tabel-container > table > thead > tr > th {
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid rgba(97, 96, 99, 0.1);
+}
+
+.audit-main-container > .autdit-tabel-container > table > tbody > tr > td {
+  text-align: center;
+  border: 1px solid rgba(97, 96, 99, 0.1);
+}
+
+.autdit-tabel-container table tbody tr td:nth-child(3) span {
+  background-color: #299aff;
+  color: #fff;
+  font-weight: 500;
+  display: inline-flex;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+.autdit-tabel-container table tbody tr td:nth-child(4) span {
+  background-color: #4bd966;
+  color: #fff;
+  font-weight: 500;
+  display: inline-flex;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}

@@ -1,0 +1,23 @@
+.heading {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgba(61, 78, 101, 0.84);
+  font-size: 2.14375rem;
+  padding: 8px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+  border-bottom: 2px solid rgba(97, 96, 99, 0.1);
+}

@@ -1,0 +1,13 @@
+.side-panel-card-container > .card-container-sidepanel {
+  width: 30rem;
+  margin-top: 5rem;
+}
+
+.side-panel-card-container > .side-panel-close-btn {
+  position: absolute;
+  top: 2rem;
+  color: var(--sidepanel-close-icon-color);
+  right: 2rem;
+  width: 1.8rem;
+  height: 1.7rem;
+}

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+.entire-page {
+  background-image: linear-gradient(
+    to right,
+    var(--login-bg-color-primary),
+    var(--login-bg-color-secondary)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.entire-page .form-container {
+  width: 43rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  /* border: 1px solid hotpink; */
+}
+
+.entire-page .form-container .input-fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.entire-page .form-container .input-fields .username,
+.password {
+  height: 2.5rem;
+  border-radius: 9px;
+  padding: 9px;
+  background-color: var(--login-text-icon-input-bg-color);
+  color: var(--login-input-text-color);
+}
+
+/* show password -> labels and inputs  */
+.show-password-wrapper > label {
+  color: var(--login-text-icon-input-bg-color);
+}
+
+/* remember me -> labels and inputs */
+.remember-wrapper > label {
+  color: var(--login-text-icon-input-bg-color);
+}
+
+/* image style */
+.entire-page .form-container .image img {
+  height: 130px;
+  width: 130px;
+  margin-bottom: 3rem;
+}
+
+/* login button */
+.entire-page .form-container .login-btn {
+  font-size: 0.875rem;
+  font-weight: 300;
+  border-radius: 50px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 25px;
+  background: var(--login-button-color);
+  border: 1px solid var(--login-button-text-border-color);
+  color: var(--login-button-text-border-color);
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  /* font-family: "Roboto"; */
+}
+
+/* error input field */
+.username-input-error,
+.password-input-error {
+  border: 1px solid red;
+  height: 2.5rem;
+  border-radius: 9px;
+  padding: 9px;
+}
+
+.username-input-error::placeholder,
+.password-input-error::placeholder {
+  color: red !important;
+}
+
+/* disable login button */
+.entire-page .form-container .login-disable-btn {
+  font-size: 0.875rem;
+  font-weight: 300;
+  border-radius: 50px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 25px;
+  background: grey;
+  border: 1px solid var(--login-button-text-border-color);
+  color: white;
+  margin-bottom: 1.5rem;
+  cursor: default;
+  /* font-family: "Roboto"; */
+}
+
+.entire-page .form-container .input-fields .show-password {
+  appearance: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #508fa7;
+  align-self: flex-start;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.entire-page .form-container .input-fields .show-password:checked::after {
+  content: "\2714";
+  color: #508fa7;
+  position: absolute;
+  width: 20px;
+  right: 0.5px;
+  left: 0.5px;
+  bottom: -0.06px;
+}
+
+.entire-page .form-container .input-fields .remember-me {
+  appearance: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #508fa7;
+  align-self: flex-start;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.entire-page .form-container .input-fields .remember-me:checked::after {
+  content: "\2714";
+  color: #508fa7;
+  position: absolute;
+  width: 20px;
+  right: 0.5px;
+  left: 0.5px;
+  bottom: -0.06px;
+}
+
+.entire-page .form-container .login-btn:hover {
+  box-shadow: 0px 0px 15px 5px rgba(255 255 255 / 45%);
+}
+
+.entire-page .form-container > span {
+  color: var(--login-text-icon-input-bg-color);
+  cursor: pointer;
+}
+
+/* error message */
+.username-error,
+.password-error {
+  color: rgb(216, 17, 17);
+  font-size: medium;
+}
+
+.form-container > form:last-child {
+  width: 189px;
+  height: 24px;
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.055em;
+  color: #ffffff;
+}
+
+.entire-page .form-container .image img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 375px) {
+  .entire-page .form-container {
+    width: 42.875rem;
+  }
+  .entire-page .form-container .input-fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .entire-page .form-container .input-fields .username,
+  .password {
+    height: 1.67rem;
+    border-radius: 8px;
+  }
+}
