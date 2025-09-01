@@ -6,7 +6,7 @@ const Dashboard = () => {
     <>
       <Head title="Dashboard" />
       <h1 className={`${styleDashboard.welcome} w-[80rem] text-center`}>
-        Welcome to Web-Twin Pro CMS
+        Welcome to SCCP Pro CMS
       </h1>
     </>
   );

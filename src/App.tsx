@@ -43,7 +43,7 @@ import NotFound from "./Components/404 Not Found/NotFound";
 import { useGetLoggedInUser } from "./api/loggedinUser";
 import Unauthorized from "./Components/Unauthorized/Unauthorized";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
-import "rc-color-picker/assets/index.css";
+// import "rc-color-picker/assets/index.css";
 import { useGetConfig } from "./api/config";
 import { Helmet } from "react-helmet";
 import { Spin } from "antd";

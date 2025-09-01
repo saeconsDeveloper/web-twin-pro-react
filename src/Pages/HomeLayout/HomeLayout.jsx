@@ -593,10 +593,10 @@ const HomeLayout = ({ user }) => {
               <div className={styleHomeLayout["logo-home-btn-container"]}>
                 <div className={styleHomeLayout["hover-dropdown"]}>
                   <figure className={styleHomeLayout["svg-logo-container"]}>
-                    <img
+                     <img
                       src={`${CONFIG.BASE_URI}/${basicSettingList?.navbar_logo}`}
                       alt="company_logo"
-                    />
+                    /> 
                   </figure>
 
                   {typeof token !== "undefined" &&
@@ -609,7 +609,7 @@ const HomeLayout = ({ user }) => {
                             target="_blank"
                           >
                             <span>
-                              <FontAwesomeIcon icon={faGauge} /> Web-Twin Pro
+                              <FontAwesomeIcon icon={faGauge} /> SCCP Pro
                               CMS
                             </span>
                           </Link>

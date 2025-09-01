@@ -57,7 +57,7 @@ const Sidebar = ({ setVisibility, user }) => {
 
   const items = [
     {
-      label: <strong>Web Twin</strong>,
+      label: <strong>SCCP</strong>,
       key: "0",
     },
     {

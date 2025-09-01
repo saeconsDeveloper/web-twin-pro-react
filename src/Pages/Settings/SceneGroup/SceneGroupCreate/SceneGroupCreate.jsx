@@ -1,9 +1,7 @@
 import * as z from "zod";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import Panel from "rc-color-picker/lib/Panel";
-import { Button, Dropdown, Input } from "antd";
-import Color from "rc-color-picker/lib/helpers/color";
+import { Button, Input, ColorPicker } from "antd";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 import {
@@ -17,23 +15,23 @@ import { useRHForm, ControlledField } from "../../../../Components/form";
 
 const SceneCreate = () => {
   const { ID } = useParams();
-  const colors = new Color();
   const navigate = useNavigate();
   const { state } = useLocation();
   const { name, color } = state ?? {};
+
   const {
     mutateAsync: mutateAsyncCreate,
     isLoading: isLoadingCreate,
     error: errorCreate,
   } = useCreateSceneGroup();
+
   const {
     mutateAsync: mutateAsyncUpdate,
     isLoading: isLoadingUpdate,
     error: errorUpdate,
   } = useUpdateSceneGroup(ID);
-  const [internalColor, setInternalColor] = useState(
-    color ?? `#${colors?.hex}`
-  );
+
+  const [internalColor, setInternalColor] = useState(color ?? "#1677ff");
 
   const {
     Form,
@@ -48,7 +46,7 @@ const SceneCreate = () => {
     }),
   });
 
-  const handleSubmit = data => {
+  const handleSubmit = (data) => {
     if (ID) {
       mutateAsyncUpdate({
         data: {
@@ -56,13 +54,13 @@ const SceneCreate = () => {
           color: internalColor,
         },
       })
-        .then(res => {
+        .then((res) => {
           if (res?.data) {
             toast.success(res?.data?.message);
             navigate("/web-twinprocms/scene-group");
           }
         })
-        .catch(err => {
+        .catch((err) => {
           toast.error(err?.message);
         });
       return;
@@ -74,34 +72,20 @@ const SceneCreate = () => {
         color: internalColor,
       },
     })
-      .then(res => {
+      .then((res) => {
         if (res?.data) {
           toast.success(res?.data?.message);
           navigate("/web-twinprocms/scene-group");
         }
       })
-      .catch(err => {
+      .catch((err) => {
         toast.error(err?.message);
       });
   };
 
-  const handleChange = color => {
-    setInternalColor(color?.color);
+  const handleColorChange = (color) => {
+    setInternalColor(color.toHexString());
   };
-
-  const items = [
-    {
-      key: 1,
-      label: (
-        <Panel
-          color={internalColor}
-          enableAlpha={false}
-          onChange={handleChange}
-        />
-      ),
-      disabled: true,
-    },
-  ];
 
   return (
     <div>
@@ -112,6 +96,7 @@ const SceneCreate = () => {
       <hr />
       <Form onSubmit={handleSubmit}>
         <div className="w-[75rem] p-8 flex flex-col gap-6">
+          {/* Name Field */}
           <div>
             <ControlledField
               required
@@ -125,25 +110,28 @@ const SceneCreate = () => {
               {(errorCreate || errorUpdate)?.response?.data?.name?.toString()}
             </ErrorLabel>
           </div>
+
+          {/* Color Field */}
           <div>
             <Label required>Color</Label>
-            <Dropdown
-              trigger={["click"]}
-              menu={{ items }}
-              placement="bottom"
-              arrow={{ pointAtCenter: true }}
-            >
-              <div>
-                <Input
-                  value={internalColor || ""}
-                  onChange={e => setInternalColor(e.target.value)}
-                />
-              </div>
-            </Dropdown>
+            <div className="flex items-center gap-4">
+              <ColorPicker
+                value={internalColor}
+                onChange={handleColorChange}
+                showText
+              />
+              <Input
+                value={internalColor || ""}
+                onChange={(e) => setInternalColor(e.target.value)}
+                style={{ width: 150 }}
+              />
+            </div>
             <ErrorLabel>
               {(errorCreate || errorUpdate)?.response?.data?.color?.toString()}
             </ErrorLabel>
           </div>
+
+          {/* Save Button */}
           <Button
             htmlType="submit"
             className={styles["save-btn"]}

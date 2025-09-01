@@ -29,7 +29,7 @@
   /* Dropdowns (Sectors, Search, Filter, etc) default color */
   --dropdown-bg-color-primary: #172a4f;
   --dropdown-bg-color-secondary: #121212;
-  --dropdown-text-color: #000000;
+  --dropdown-text-color: #fff;
 
   /* Sector layout Side panel default colors */
   --sidepanel-bg-color-primary: #172a4f;

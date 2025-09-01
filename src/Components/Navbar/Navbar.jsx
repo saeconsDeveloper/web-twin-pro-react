@@ -71,7 +71,7 @@ const Navbar = ({ setVisibility, user }) => {
           {(() => {
             switch (outcome) {
               case 1:
-                return "Web-Twin Pro CMS";
+                return "SCCP Pro CMS";
               case 2:
                 return "Scenes";
               case 3:
